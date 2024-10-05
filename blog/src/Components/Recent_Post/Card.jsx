@@ -1,42 +1,33 @@
 import React from 'react';
-import { inbox } from '../../assets';
+import Card from '../../Components/Recent_Post/Card';
+import { image1, image2, image3, image4, image5, image6 } from '../../assets';
 
-const Card = ({ image, title }) => {
+const BlogCard = () => {
   return (
-    <div className='w-[270px] h-[360px] border max-sm:w-[330px] max-sm:h-[350px]'>
-      {/* Image Section */}
-      <div className='w-full h-[200px]'>
-        <img 
-          src={image} 
-          alt="Culinary Journey" 
-          className='w-full h-full object-cover'
-        />
+    <div className='mt-52'>
+      {/* Page Title */}
+      <h1 className='primary_text text-[32px] px-48 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
+        Recent Posts
+      </h1>
+
+      {/* Cards Section */}
+      <div className='w-full flex justify-center items-start px-20 max-sm:w-full max-sm:p-4'>
+        <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-2 lg:grid-rows-2'>
+          {/* Card Components */}
+          {[image1, image2, image3, image4, image5, image6].map((image, index) => (
+            <Card key={index} image={image} title={`Card Title ${index + 1}`} />
+          ))}
+        </div>
       </div>
 
-      {/* Content Section */}
-      <div className='p-7 pt-4 flex flex-col h-20'>
-        <a href="#" className='cursor-pointer'>
-          <h1 className='primary_text text-black font-medium text-[24px] font-semibold opacity-80 hover:text-[#d59900] overflow-hidden whitespace-nowrap text-ellipsis'>
-            {title}
-          </h1>
-        </a>    
-
-        <div className='mt-auto'> 
-          <p className='opacity-10 p-0 m-0'>___________________________________</p>
-
-          {/* Inbox Icon */}
-          <img
-            src={inbox}
-            alt="Inbox"
-            width={25}
-            height={20}
-            className='object-contain cursor-pointer pt-1 hover:brightness-150 transition duration-200'
-            onClick={() => console.log('touched')}
-          />
-        </div>
+      {/* Footer Section */}
+      <div className='flex justify-center mt-20 mb-10'>
+        <button className='px-6 py-2 bg-[#d59900] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'>
+          View More Posts
+        </button>
       </div>
     </div>
   );
 }
 
-export default Card;
+export default BlogCard;
