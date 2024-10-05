@@ -7,7 +7,7 @@ import backgroundVideo from "./fitness2.mp4";
 const HomePage = () => {
   return (
     <>
-    <Navbar/>
+     <Navbar/>
     <div className="relative h-screen">
       {/* Background Video */}
       <video
@@ -49,9 +49,9 @@ const HomePage = () => {
         </p>
       </div>
     </div>
-    <BlogCard/>
     <Footer/>
     </>
+    
   );
 };
 
