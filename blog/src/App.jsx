@@ -1,26 +1,23 @@
 import React from 'react'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import Footer from './Pages/Footer/Footer'
+import Footer from '../../blog/src/Pages/Footer/Footer'
+import LandPage from '../../blog/src/Pages/LandPage/LandPage'
+import BlogCard from './Pages/BlogCard/BlogCard'
 import Navbar from './Pages/Navbar/Navbar'
 
-const routes = (
-  <Router>
-    <Routes>
-      
-      <Route path='/navbar' element = {<Navbar/>} />
-      <Route path='/Footer' element = {<Footer/>} />
-    </Routes>
-   
-   
-  </Router>
-)
+
 
 
 const App = () => {
   return (
-    <div>
-      {routes}
-    </div> 
+  <div>
+
+<Navbar/>
+<LandPage/>
+<BlogCard/>
+<Footer/>
+
+
+  </div> 
   )
 }
 
