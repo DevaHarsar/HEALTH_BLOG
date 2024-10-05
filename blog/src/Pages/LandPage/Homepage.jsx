@@ -1,8 +1,13 @@
 
+import BlogCard from "../BlogCard/BlogCard";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 import backgroundVideo from "./fitness2.mp4"; 
 
 const HomePage = () => {
   return (
+    <>
+    <Navbar/>
     <div className="relative h-screen">
       {/* Background Video */}
       <video
@@ -44,6 +49,9 @@ const HomePage = () => {
         </p>
       </div>
     </div>
+    <BlogCard/>
+    <Footer/>
+    </>
   );
 };
 
