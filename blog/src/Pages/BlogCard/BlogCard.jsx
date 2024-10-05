@@ -5,7 +5,7 @@ import { image1, image2, image3, image4, image5, image6 } from '../../assets';
 const BlogCard = () => {
   return (
     <>
-      <div className='mt-52'>
+      <div className='mt-12'>
         {/* Page Title */}
         <h1 className='primary_text text-[32px] px-48 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
           Recent Posts
