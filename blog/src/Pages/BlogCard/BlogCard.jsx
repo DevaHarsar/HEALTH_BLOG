@@ -11,6 +11,9 @@ const BlogCard = () => {
           Recent Posts
         </h1>
 
+
+
+{/* Done */}
         {/* Cards Section */}
         <div className='w-full flex justify-center items-start px-20 max-sm:w-full max-sm:p-4'>
           <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-3 xl:grid-rows-2 lg:grid-rows-2'>
