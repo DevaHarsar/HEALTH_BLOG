@@ -1,4 +1,4 @@
-import React from "react";
+
 import backgroundVideo from "./fitness2.mp4"; 
 
 const HomePage = () => {
