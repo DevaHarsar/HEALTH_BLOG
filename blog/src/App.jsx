@@ -1,10 +1,12 @@
-import React from 'react'
+import Landpage from "./Pages/LandPage/LandPage"
 
 const App = () => {
   return (
-    <div>
-      App
-    </div>
+   <>
+
+   <Landpage/>
+   
+   </>
   )
 }
 
