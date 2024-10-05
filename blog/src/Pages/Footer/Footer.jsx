@@ -11,15 +11,20 @@ const Footer = () => {
             FITNESS & FREAK
           </p>
         </div>
-        <div className='flex flex-col text-white justify-around gap-3 '>
 
-          <a href="#" className='hover:text-fuchsia-400'>Home</a>
-          <a href="#" className='hover:text-fuchsia-400'>About me</a>
-          <a href="#" className='hover:text-fuchsia-400'>Work with me</a>
-          <a href="#" className='hover:text-fuchsia-400'>As Featured In</a>
-          <a href="#" className='hover:text-fuchsia-400'>Instagram</a>
-          <a href="#" className='hover:text-fuchsia-400'>Contact</a>
+         {/* list items */}
+        <div className='flex flex-col text-white justify-around gap-3  '>
+           <ul className='flex flex-col gap-3 cursor-pointer'>
+          <li href="#" className='hover:text-fuchsia-400'>Home</li>
+          <li href="#" className='hover:text-fuchsia-400'>About me</li>
+          <li href="#" className='hover:text-fuchsia-400'>Work with me</li>
+          <li href="#" className='hover:text-fuchsia-400'>As Featured In</li>
+          <li href="#" className='hover:text-fuchsia-400'>Instagram</li>
+          <li href="#" className='hover:text-fuchsia-400'>Contact</li>
+          </ul>
         </div>
+
+        {/* right last footer */}
         <div className='flex flex-col text-white font-serif justify-evenly '>
           <div className='w-[60%]'>
             Subscribe here and get the latest travel tips  and my insider secrets!
@@ -35,7 +40,7 @@ const Footer = () => {
                 <p>Get latest updates on NewsLetter regularly</p>
               </div>
               <div>
-                <button className='rounded-md bg-white text-black hover:bg-blue-900 hover:text-white w-fit'>SUBSCRIBE</button>
+                <button className='rounded-md bg-white text-black hover:bg-blue-900 hover:text-white w-32'>SUBSCRIBE</button>
               </div>
             </div>
 
