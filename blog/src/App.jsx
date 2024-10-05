@@ -6,12 +6,12 @@ import Navbar from './Pages/Navbar/Navbar'
 const routes = (
   <Router>
     <Routes>
+      
       <Route path='/navbar' element = {<Navbar/>} />
-    </Routes>
-    
-    <Routes>
       <Route path='/Footer' element = {<Footer/>} />
     </Routes>
+   
+   
   </Router>
 )
 
