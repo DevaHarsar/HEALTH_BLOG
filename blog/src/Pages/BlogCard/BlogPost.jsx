@@ -34,7 +34,7 @@ const FitnessBlogPost = () => {
         </div>
 
         {/* Sidebar Section */}
-        <div className="bg-amber-500 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+        <div className="bg-slate-400 p-6 rounded-lg shadow-lg flex flex-col justify-between">
           <div className="flex flex-col items-center">
             <img 
               src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" 

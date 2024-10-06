@@ -4,7 +4,7 @@ import Navbar from '../src/Pages/Navbar/Navbar'
 import Blog from './Pages/BlogCard/Blog'
 
   import Footer from './Pages/Footer/Footer'
-  // import BlogPost from './Pages/BlogCard/BlogPost'
+  import BlogPost from './Pages/BlogCard/BlogPost'
 
 
 
@@ -33,7 +33,7 @@ const App = () => {
     <Navbar/>
     <HomePage/>
     <Blog/>
-    {/* <BlogPost/> */}
+    <BlogPost/>
     <Footer/>
     </>
 
