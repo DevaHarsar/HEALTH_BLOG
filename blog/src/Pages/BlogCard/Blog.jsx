@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Card from '../../Components/Recent_Post/Athu'
 import { image1, image2, image3, image4, image5, image6 } from '../../assets'
 
@@ -11,10 +11,6 @@ const Blog = () => {
           Recent Posts
         </h1>
 
-
-
-{/* Done */}
-{/* DOne */}
         {/* Cards Section */}
         <div className='w-full flex justify-center items-start px-14 max-sm:w-full max-sm:p-4'>
           <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
@@ -33,7 +29,7 @@ const Blog = () => {
 
         {/* Footer Section */}
         <div className='flex justify-center mt-20 mb-10'>
-          <button className='px-6 py-2 bg-[#d59900] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'>
+          <button className='px-6 py-2 bg-[#b8953d] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'>
             View More Posts
           </button>
         </div>
