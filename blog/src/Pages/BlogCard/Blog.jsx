@@ -1,28 +1,31 @@
-import React from 'react';
-import Card from '../../Components/Recent_Post/Card';
-import { image1, image2, image3, image4, image5, image6 } from '../../assets';
+import React from 'react'
+import Card from '../../Components/Recent_Post/Athu'
+import { image1, image2, image3, image4, image5, image6 } from '../../assets'
 
-const BlogCard = () => {
+const Blog = () => {
   return (
-    <>
-      <div className='mt-12'>
+    <>  
+      <div className='mt-52'>
         {/* Page Title */}
-        <h1 className='primary_text text-[32px] px-48 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
+        <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
           Recent Posts
         </h1>
 
 
 
 {/* Done */}
+{/* DOne */}
         {/* Cards Section */}
-        <div className='w-full flex justify-center items-start px-20 max-sm:w-full max-sm:p-4'>
+        <div className='w-full flex justify-center items-start px-14 max-sm:w-full max-sm:p-4'>
           <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
-            {/* Card Components */}
-            <Card image={image1} title="Push yourself" />
-            <Card image={image2} title="Fitness is not a destination" />
+        {/* < Athu/> */}
+            <Card image={image1} title="Push yourself" /> 
+           <Card image={image2} title="Fitness is not a destination" />
             <Card image={image3} title="Stronger every day" />
             <Card image={image4} title="Sweat now" />
             <Card image={image5} title="Don’t stop until" />
+            <Card image={image6} title="Your only limit" />
+            <Card image={image6} title="Your only limit" />
             <Card image={image6} title="Your only limit" />
 
           </div>
@@ -36,7 +39,7 @@ const BlogCard = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default BlogCard;
+export default Blog
