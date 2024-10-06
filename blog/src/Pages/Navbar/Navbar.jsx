@@ -4,19 +4,19 @@ import { FaMagnifyingGlass } from 'react-icons/fa6'
 const Navbar = () => {
   return (
     <>
-    {/* Logo Part */}
-    <div className='w-screen py-5 bg-black text-white flex justify-between items-center px-6 drop-shadow'>
+    <div className='w-screen py-5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
 
-      <div className='flex items-center gap-3 px-16'>
-        <div className='w-16 h-16 flex items-center justify-center rounded-full bg-slate-100 font-medium text-slate-950'>
+    {/* Logo Part */}
+      <div className='flex items-center gap-3 px-16 max-sm:px-8 max-sm:'>
+        <div className='w-16 h-16 flex items-center justify-center rounded-full bg-slate-100 font-medium text-slate-950 max-sm:h-12 max-sm:w-16' >
             <img className='rounded-full h-full' src='https://media.istockphoto.com/id/1035561592/vector/vector-design-element-for-the-fitness-center.jpg?s=612x612&w=0&k=20&c=k3yyyEcqeivby9iE7gZIk33PAjtDqNsdEdYiMjw7qsM='></img>
         </div>
 
             <div>
-                <p className='text-2xl font-bold font-sans cursor-pointer'>
-                <span className="text-red-500">FITNESS</span> CLUB
+                <p className='text-2xl font-bold font-sans cursor-pointer max-sm:text-base'>
+                <span className="text-red-500 max-sm:text-base">FITNESS</span> CLUB
                 </p>
-                <p className = 'text-white text-xl font-serif'>
+                <p className = 'text-white text-xl font-serif max-sm:text-xs'>
                     <span className='pr-1'>B</span>
                     <span className='pr-1'>l</span>
                     <span className='pr-1'>o</span>
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         {/* List Part */}
-        <div className='px-6'>
+        <div className='px-6 max-sm:hidden'>
         <ul className='flex items-center gap-10 font-serif text-[20px]'>
             <li className='hover:text-slate-400 hover:underline cursor-pointer'>Home</li>
             <li className='hover:text-slate-400 hover:underline cursor-pointer'>Blog</li>
