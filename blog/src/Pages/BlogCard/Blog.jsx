@@ -1,11 +1,32 @@
 // import React from 'react'
+import { useEffect, useState } from 'react'
 import Card from '../../Components/Recent_Post/Athu'
 import { image1, image2, image3, image4, image5, image6 } from '../../assets'
 
+
+
+
 const Blog = () => {
+
+  const [items , setItems] = useState([])
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('http://localhost:3333')
+      const data = await res.json()
+      setItems(data.items)
+
+    }
+    fetchData()
+  } , [])
+  
   return (
     <>  
       <div className='mt-52'>
+      {/* {items.map((item,index) => {
+        console.log(item.title)
+        console.log(item.description)
+      })} */}
         {/* Page Title */}
         <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
           Recent Posts 
