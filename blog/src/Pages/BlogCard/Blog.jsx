@@ -8,7 +8,7 @@ const Blog = () => {
       <div className='mt-52'>
         {/* Page Title */}
         <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
-          Recent Posts
+          Recent Posts 
         </h1>
 
         {/* Cards Section */}

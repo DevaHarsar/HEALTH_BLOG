@@ -33,7 +33,7 @@ const Footer = () => {
           <div className='flex flex-col justify-between gap-2 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:gap-0'>
             <div>
               <h1>Email*</h1>
-              <input type="email" placeholder='Email' className='mt-1  decoration-white placeholder:Email  text-black ' />
+              <input type="email" placeholder='Email' className='mt-1 px-2 decoration-white placeholder:Email  text-black ' />
             </div>
             <div className='flex flex-row  justify-between mt-2 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center'>
               <div className='flex '>
