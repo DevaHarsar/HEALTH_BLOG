@@ -19,7 +19,7 @@ const Footer = () => {
           <li href="#" className='hover:text-slate-400 font-serif'>Home</li>
           <li href="#" className='hover:text-slate-400 font-serif'>About me</li>
           <li href="#" className='hover:text-slate-400 font-serif'>Work with me</li>
-          <li href="#" className='hover:text-slate-400 font-serif'>As Featured In</li>
+          <li href="#" className='hover:text-slate-400 font-serif'>As Featured In</li> 
           <li href="#" className='hover:text-slate-400 font-serif'>Instagram</li>
           <li href="#" className='hover:text-slate-400 font-serif'>Contact</li>
           </ul>
@@ -28,7 +28,7 @@ const Footer = () => {
         {/* right last footer */}
         <div className='flex flex-col text-white font-sans justify-evenly '>
           <div className='w-[60%] '>
-            Subscribe here and get the latest travel tips  and my insider secrets!
+            Subscribe here and get the latest Health tips  and Healthy Life Secrets!
           </div>
           <div className='flex flex-col justify-between gap-2'>
             <div>
