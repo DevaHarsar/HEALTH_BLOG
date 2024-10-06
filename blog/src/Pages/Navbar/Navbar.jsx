@@ -13,8 +13,8 @@ const Navbar = () => {
         </div>
 
             <div>
-                <p className='text-2xl font-bold font-playfair cursor-pointer'>
-                    FITNESS & FREAK
+                <p className='text-2xl font-bold font-sans cursor-pointer'>
+                <span className="text-red-500">FITNESS</span> CLUB
                 </p>
                 <p className = 'text-white text-xl font-serif'>
                     <span className='pr-1'>B</span>

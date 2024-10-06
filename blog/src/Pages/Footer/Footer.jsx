@@ -8,8 +8,8 @@ const Footer = () => {
       <div className='bg-black flex flex-row  justify-evenly font-playfair text-lg '>
         <div className='text-white flex flex-col justify-center items-center'>
           <img className='h-32 cursor-pointer rounded-full mb-3' src='https://media.istockphoto.com/id/1035561592/vector/vector-design-element-for-the-fitness-center.jpg?s=612x612&w=0&k=20&c=k3yyyEcqeivby9iE7gZIk33PAjtDqNsdEdYiMjw7qsM='></img>
-          <p className='text-2xl font-bold font-playfair cursor-pointer'>
-            FITNESS & FREAK
+          <p className='text-2xl font-bold font-sans cursor-pointer'>
+             <span className="text-red-500">FITNESS</span> CLUB
           </p>
         </div>
 

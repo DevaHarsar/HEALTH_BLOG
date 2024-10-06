@@ -23,7 +23,7 @@ const Athu = ({ image, title }) => {
         {/* Content Section */}
         <div className='p-7 pt-4 flex flex-col h-20 mt-5'>
           <a href="#" className='cursor-pointer'>
-            <h1 className='primary_text text-black font-medium text-[20px] font-semibold opacity-80 hover:text-[#d59900] overflow-hidden whitespace-nowrap text-ellipsis'>
+            <h1 className='primary_text text-black  text-[20px] font-semibold opacity-80 hover:text-[#d59900] overflow-hidden whitespace-nowrap text-ellipsis'>
               {title}
             </h1>
           </a>

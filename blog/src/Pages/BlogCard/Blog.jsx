@@ -20,7 +20,7 @@ const Blog = () => {
           <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
         {/* < Athu/> */}
             <Card image={image1} title="Push yourself" /> 
-           <Card image={image2} title="Fitness is not a destination" />
+            <Card image={image2} title="Fitness is not a destination" />
             <Card image={image3} title="Stronger every day" />
             <Card image={image4} title="Sweat now" />
             <Card image={image5} title="Don’t stop until" />
