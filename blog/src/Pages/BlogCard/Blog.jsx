@@ -19,34 +19,30 @@ const Blog = () => {
     }
     fetchData()
   } , [])
+
+
+
   
   return (
     <>  
       <div className='mt-52'>
-      {/* {items.map((item,index) => {
-        console.log(item.title)
-        console.log(item.description)
-      })} */}
         {/* Page Title */}
         <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
           Recent Blogs 
         </h1>
 
+        
+
         {/* Cards Section */}
         <div className='w-full flex justify-center items-start px-14 max-sm:w-full max-sm:p-4'>
-          <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2  xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
-        {/* < Athu/> */}
-            <Card image={image1} title="Push yourself" /> 
-            <Card image={image2} title="Fitness is not a destination" />
-            <Card image={image3} title="Stronger every day" />
-            <Card image={image4} title="Sweat now" />
-            <Card image={image5} title="Don’t stop until" />
-            <Card image={image6} title="Your only limit" />
-            <Card image={image6} title="Your only limit" />
-            <Card image={image6} title="Your only limit" />
-
-          </div>
+        <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
+          {items.map((post, index) => (
+            <Card key={index} image={post.imageURL} title={post.description} />
+          ))}
         </div>
+      </div>
+
+
 
         {/* Footer Section */}
         <div className='flex justify-center mt-20 mb-10'>
