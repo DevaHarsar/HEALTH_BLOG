@@ -8,7 +8,6 @@ const App = () => {
   return (
     <>
       <Navbar />
-      {/* Each component should have a unique ID for scrolling */}
       <div id='home'>
         <HomePage />
       </div>
