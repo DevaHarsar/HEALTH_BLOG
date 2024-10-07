@@ -8,7 +8,6 @@ const Navbar = () => {
     setVisible(!visible);
   };
 
-  // Function to scroll to a specific section based on the id
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -49,7 +48,6 @@ const Navbar = () => {
         {/* List Part */}
         <div className='px-6 max-sm:hidden'>
           <ul className='flex items-center gap-10 font-serif text-[20px]'>
-            {/* Each item triggers a scroll to its corresponding section */}
             <li
               className='hover:text-slate-400 hover:underline cursor-pointer'
               onClick={() => handleScroll('home')}

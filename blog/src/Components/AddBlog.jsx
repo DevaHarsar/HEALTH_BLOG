@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AddBlog = ({ handleClose }) => {
   const [title, setTitle] = useState('');
@@ -8,7 +8,7 @@ const AddBlog = ({ handleClose }) => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (!title || !description) {
       setMessage('Title and description are required');
@@ -27,11 +27,26 @@ const AddBlog = ({ handleClose }) => {
       setDescription('');
       setImage('');
       setMessage('Blog post added successfully!');
+      
+      
+        useEffect(()=>{
+          setTimeout(() => {
+            handleClose();
+          }, 4000);
+        },[]);
+    
+
     } catch (error) {
       console.error('There was an error adding the blog!', error);
       setMessage('Failed to add blog post');
     }
   };
+
+
+  
+
+
+
 
   const handleImageChange = (e) => {
     const reader = new FileReader();
@@ -44,14 +59,14 @@ const AddBlog = ({ handleClose }) => {
 
   return (
     <div className='fixed inset-0 z-10 bg-black/60 backdrop-blur-sm flex justify-center items-center'>
-      {/* Modal Content */}
+
       <div className='relative w-full max-w-lg bg-white/90 backdrop-blur-sm shadow-lg p-10 rounded-lg'>
-        {/* Close Button */}
+ 
         <button
           onClick={handleClose}
           className='absolute top-4 right-4 text-red-500 text-xl hover:text-red-700'
         >
-          &#10005; {/* Close button (X) */}
+          &#10005;
         </button>
 
         <h1 className='primary_text text-[36px] max-sm:text-[22px] text-center'>
@@ -106,7 +121,6 @@ const AddBlog = ({ handleClose }) => {
           </button>
         </form>
 
-        {/* Displaying the success/error message */}
         {message && (
           <p className='mt-5 text-[16px] text-center text-[#d59900]'>{message}</p>
         )}

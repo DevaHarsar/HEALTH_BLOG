@@ -3,7 +3,7 @@ import Card from '../../Components/Recent_Post/Athu';
 
 const Blog = () => {
   const [items, setItems] = useState([]);
-  const [visibleItems, setVisibleItems] = useState(8); // Initially show 2 items
+  const [visibleItems, setVisibleItems] = useState(8); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,7 +14,6 @@ const Blog = () => {
     fetchData();
   }, []);
 
-  // Function to load more items
   const handleViewMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 4); 
   };
