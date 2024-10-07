@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { heart, likedHeart } from '../../assets';
 
-
-const Athu = ({ image, title, id }) => {
-  const [liked, setLiked] = useState(false);
+const Athu = ({ image, title }) => {
+  const [liked, setLiked] = useState(false); 
 
   const handleLikeClick = () => {
-    setLiked(!liked);  
+    setLiked(!liked); 
   };
 
   return (
@@ -19,30 +17,28 @@ const Athu = ({ image, title, id }) => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {/* Image Section */}
-      <Link to={`/blog/${id}`}> 
-        <div className='w-full h-[200px]'>
-          <img
-            src={image}
-            alt={title}
-            className='w-full h-full object-cover rounded-lg'
-          />
-        </div>
-      </Link>
+      <div className='w-full h-[200px]'>
+        <img
+          src={image}
+          alt="Culinary Journey"
+          className='w-full h-full object-cover rounded-lg'
+        />
+      </div>
 
       {/* Content Section */}
       <div className='p-7 pt-4 flex flex-col h-20 mt-5'>
-        <Link to={`/blog/${id}`} className='cursor-pointer'>
+        <a href="#" className='cursor-pointer'>
           <h1 className='primary_text text-black text-[20px] font-semibold opacity-80 hover:text-[#d59900] overflow-hidden whitespace-nowrap text-ellipsis'>
             {title}
           </h1>
-        </Link>
+        </a>
 
         <div className='mt-auto'>
           <p className='opacity-10 p-0 m-0'>___________________________________</p>
 
           {/* Heart Icon */}
           <img
-            src={liked ? likedHeart : heart}
+            src={liked ? likedHeart : heart} 
             alt="Like"
             width={20}
             height={15}
