@@ -4,6 +4,7 @@ import HomePage from '../../blog/src/Pages/LandPage/Homepage'
 import Navbar from '../src/Pages/Navbar/Navbar'
 import AddBlog from './Components/AddBlog'
 import Blog from './Pages/BlogCard/Blog'
+import BlogPost from './Pages/BlogCard/BlogPost'
 
 
 
@@ -30,8 +31,9 @@ const App = () => {
     // </div> 
 <>
     <Navbar/>
-     <HomePage/>
+    <HomePage/>
     <Blog/>
+    {/* <BlogPost/> */}
     <AddBlog/>
     <Footer/>
    

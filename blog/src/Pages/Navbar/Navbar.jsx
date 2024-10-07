@@ -1,7 +1,17 @@
 
+import { useState } from 'react'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
+import Blog from '../BlogCard/Blog'
+import AddBlog from '../../Components/AddBlog'
 
 const Navbar = () => {
+
+  const [visible,setVisible] = useState(false)
+
+  const handleVisible = () => {
+    setVisible(!visible);
+  }
+
   return (
     <>
     <div className='w-screen py-5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
@@ -42,12 +52,13 @@ const Navbar = () => {
         <ul className='flex items-center gap-10 font-serif text-[20px]'>
             <li className='hover:text-slate-400 hover:underline cursor-pointer'>Home</li>
             <li className='hover:text-slate-400 hover:underline cursor-pointer'>Blog</li>
-            <li className='hover:text-slate-400 hover:underline cursor-pointer'>About</li>
+            <li className='hover:text-slate-400 hover:underline cursor-pointer' onClick = {handleVisible}>Add Blogs</li>
+
             <li className='hover:text-slate-400 hover:underline cursor-pointer'>Contact</li>
         </ul>
         </div>
-
     </div>
+        {visible ? <AddBlog/> : ""}
     </>
   )
 }

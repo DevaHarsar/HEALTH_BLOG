@@ -1,7 +1,7 @@
 // import React from 'react';
 import { AiFillFacebook, AiOutlineTwitter, AiFillLinkedin, AiOutlineLink, AiFillHeart } from 'react-icons/ai';
 
-const FitnessBlogPost = () => {
+const BlogPost = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       {/* Container */}
@@ -81,4 +81,4 @@ const FitnessBlogPost = () => {
   );
 };
 
-export default FitnessBlogPost;
+export default BlogPost;
