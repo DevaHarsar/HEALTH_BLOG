@@ -29,7 +29,7 @@ const Blog = () => {
       })} */}
         {/* Page Title */}
         <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
-          Recent Posts 
+          Recent Blogs 
         </h1>
 
         {/* Cards Section */}
@@ -50,7 +50,8 @@ const Blog = () => {
 
         {/* Footer Section */}
         <div className='flex justify-center mt-20 mb-10'>
-          <button className='px-6 py-2 bg-[#b8953d] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'>
+          <button className='px-6 py-2 bg-[#b8953d] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'
+          >
             View More Posts
           </button>
         </div>
