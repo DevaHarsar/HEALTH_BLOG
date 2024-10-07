@@ -29,7 +29,7 @@ const HomePage = () => {
         </div>
 
         {/* Featured Post Section */}
-        <div className="absolute flex flex-col mr-2 -bottom-36 right-0 md:-bottom-52 md:right-18 bg-opacity-90 bg-gray-950 p-4 md:p-8 rounded-lg shadow-xl h-72 md:h-96 w-full md:w-8/12">
+        <div className="absolute flex flex-col mr-2 -bottom-36 right-0 md:-bottom-52 md:right-18  right-44 bg-opacity-90 bg-gray-950 p-4 md:p-8 rounded-lg shadow-xl h-72 md:h-96 w-full md:w-8/12">
           <h2 className="text-white text-lg font-bold mb-3 md:mb-4">Featured Post</h2>
           <img
             src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
@@ -37,12 +37,11 @@ const HomePage = () => {
             className="w-full h-32 md:h-40 object-cover rounded"
           />
           <h3 className="text-white text-base md:text-lg font-semibold mt-3 md:mt-4">
-            Top Hikes In Australia
+            Top Fitness Tips
           </h3>
           <p className="text-gray-400 text-xs md:text-sm">October 05, 2024 · 2 min read</p>
           <p className="text-gray-300 text-xs md:text-sm mt-2">
-            Create a blog post subtitle that summarizes your post in a few short,
-            punchy sentences...
+          Define your fitness objectives, whether it's weight loss, muscle gain, or overall health...
           </p>
         </div>
       </div>

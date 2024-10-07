@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const AddBlog = ({ handleClose }) => {
   const [title, setTitle] = useState('');
@@ -8,7 +8,7 @@ const AddBlog = ({ handleClose }) => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
     if (!title || !description) {
       setMessage('Title and description are required');
@@ -27,14 +27,18 @@ const AddBlog = ({ handleClose }) => {
       setDescription('');
       setImage('');
       setMessage('Blog post added successfully!');
-      
-      
-        useEffect(()=>{
-          setTimeout(() => {
-            handleClose();
-          }, 4000);
-        },[]);
+
+
+        setTimeout(() => {
+          handleClose();
+        }, 1000);
+  
     
+   
+
+
+
+
 
     } catch (error) {
       console.error('There was an error adding the blog!', error);
@@ -43,7 +47,7 @@ const AddBlog = ({ handleClose }) => {
   };
 
 
-  
+
 
 
 
