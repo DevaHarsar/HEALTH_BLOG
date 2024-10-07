@@ -1,10 +1,8 @@
 
 import Footer from '../../blog/src/Pages/Footer/Footer'
-import HomePage from '../../blog/src/Pages/LandPage/Homepage'
-import Navbar from '../src/Pages/Navbar/Navbar'
-import AddBlog from './Components/AddBlog'
+import HomePage from '../src/Pages/LandPage/Homepage'
 import Blog from './Pages/BlogCard/Blog'
-import BlogPost from './Pages/BlogCard/BlogPost'
+import Navbar from './Pages/Navbar/Navbar'
 
 
 
@@ -34,7 +32,7 @@ const App = () => {
     <HomePage/>
     <Blog/>
     {/* <BlogPost/> */}
-    <AddBlog/>
+    {/* <AddBlog/> */}
     <Footer/>
    
    

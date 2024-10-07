@@ -16,7 +16,7 @@ const Blog = () => {
 
   // Function to load more items
   const handleViewMore = () => {
-    setVisibleItems((prevVisibleItems) => prevVisibleItems + 4); // Increase visible items by 2 each time
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 4); 
   };
 
   return (
