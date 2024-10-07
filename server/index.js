@@ -8,12 +8,14 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-connectDb()
+connectDb();
 
 app.get('/' , async (req,res) => {
     const response = await itemModel.find()
     return res.json({items : response})
 })
+
+app.
 
 app.listen(3333 , () => {
     console.log("App is running")
