@@ -49,11 +49,11 @@ const AddBlog = ({ handleClose }) => {
   };
 
   return (
-    <div className='fixed inset-2 z-10 flex justify-center items-center'>
-      <div className='relative w-5/12 max-w-lg bg-gradient-to-r from-gray-800 to-blue-950 opacity-98 shadow-lg p-8 rounded-2xl'>
+    <div className='fixed inset-0 z-10 flex justify-center items-center p-4'>
+      <div className='relative w-full max-w-md bg-gradient-to-r from-gray-800 to-blue-950 opacity-98 shadow-lg p-6 rounded-2xl'>
         <button
           onClick={handleClose}
-          className='absolute top-5 right-7 text-white text-xl hover:text-red-400'
+          className='absolute top-5 right-5 text-white text-xl hover:text-red-400'
         >
           <MdClose />
         </button>
