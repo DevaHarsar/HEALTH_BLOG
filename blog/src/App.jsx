@@ -15,7 +15,7 @@ import Blog from './Pages/BlogCard/Blog'
 //       <Route path='/navbar' element = {<Navbar/>} />
 //       <Route path='/' element={<HomePage/>} />
 //       <Route path='/Blog' element = {<Layout/>} />
-//       <Route path='/Footer' element = {<Footer/>} />
+//       <Route path='/Footer' elemenjt = {<Footer/>} />
 //     </Routes>
    
    

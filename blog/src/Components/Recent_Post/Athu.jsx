@@ -6,17 +6,17 @@ const Athu = ({ image, title }) => {
   return (
     <>
       <motion.div
-        className='w-[270px] h-[360px] border max-sm:w-[330px] max-sm:h-[350px]'
+        className='w-[270px] h-[360px] border max-sm:w-[330px] max-sm:h-[350px] rounded-xl hover:shadow-2xl'
         initial={{ opacity: 0, y: 50 }} // Initial state: hidden and 50px below
         animate={{ opacity: 1, y: 0 }}  // Final state: visible and at correct position
         transition={{ duration: 0.6, ease: 'easeOut' }} // Animation duration and easing
       >
         {/* Image Section */}
-        <div className='w-full h-[200px]'>
+        <div className='w-full h-[200px] '>
           <img
             src={image}
             alt="Culinary Journey"
-            className='w-full h-full object-cover'
+            className='w-full h-full object-cover rounded-lg'
           />
         </div>
 
