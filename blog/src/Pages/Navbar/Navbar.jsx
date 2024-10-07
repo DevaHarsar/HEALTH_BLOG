@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import AddBlog from '../../Components/AddBlog';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleVisible = () => {
     setVisible(!visible);
+    setIsMenuOpen(false); // Close mobile menu when AddBlog is opened
   };
 
   const handleScroll = (sectionId) => {
@@ -21,7 +24,7 @@ const Navbar = () => {
       {visible && <AddBlog handleClose={handleVisible} />}
 
       {/* Navbar Section */}
-      <div className='w-screen py-5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
+      <div className='w-screen py-2.5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
         {/* Logo Part */}
         <div className='flex items-center gap-3 px-16 max-sm:px-8'>
           <div className='w-16 h-16 flex items-center justify-center rounded-full bg-slate-100 font-medium text-slate-950 max-sm:h-12 max-sm:w-16'>
@@ -35,7 +38,7 @@ const Navbar = () => {
             <p className='text-2xl font-bold font-sans cursor-pointer max-sm:text-base'>
               <span className='text-red-500 max-sm:text-base'>FITNESS</span> CLUB
             </p>
-            <p className='text-white text-xl font-serif max-sm:text-xs'>
+            <p className='text-yellow-300 text-xl font-serif max-sm:text-xs'>
               <span className='pr-1'>B</span>
               <span className='pr-1'>l</span>
               <span className='pr-1'>o</span>
@@ -45,36 +48,63 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* List Part */}
-        <div className='px-6 max-sm:hidden'>
+        {/* List Part for Desktop */}
+        <div className='px-8 max-sm:hidden'>
           <ul className='flex items-center gap-10 font-serif text-[20px]'>
             <li
-              className='hover:text-slate-400 hover:underline cursor-pointer'
+              className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('home')}
             >
-              Home
+              HOME
             </li>
             <li
-              className='hover:text-slate-400 hover:underline cursor-pointer'
+              className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('blog')}
             >
-              Blog
+              BLOG
             </li>
             <li
-              className='hover:text-slate-400 hover:underline cursor-pointer'
+              className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={handleVisible}
             >
-              Add Blogs
+              ADD BLOGS
             </li>
             <li
-              className='hover:text-slate-400 hover:underline cursor-pointer'
+              className='hover:text-slate-400  font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('contact')}
             >
-              Contact
+              CONTACT
             </li>
           </ul>
         </div>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className='sm:hidden flex items-center'>
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className='sm:hidden bg-black text-white py-4'>
+          <ul className='flex flex-col items-center gap-4 font-serif text-[18px]'>
+            <li onClick={() => handleScroll('home')} className='hover:text-slate-400 font-sans cursor-pointer'>
+              HOME
+            </li>
+            <li onClick={() => handleScroll('blog')} className='hover:text-slate-400 font-sans cursor-pointer'>
+              BLOG
+            </li>
+            <li onClick={handleVisible} className='hover:text-slate-400 font-sans cursor-pointer'>
+              ADD BLOGS
+            </li>
+            <li onClick={() => handleScroll('contact')} className='hover:text-slate-400 font-sans cursor-pointer'>
+             CONTACT
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   );
 };

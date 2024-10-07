@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { FaUpload } from 'react-icons/fa';
+import { MdClose } from 'react-icons/md';
 
 const AddBlog = ({ handleClose }) => {
   const [title, setTitle] = useState('');
@@ -28,29 +30,14 @@ const AddBlog = ({ handleClose }) => {
       setImage('');
       setMessage('Blog post added successfully!');
 
-
-        setTimeout(() => {
-          handleClose();
-        }, 1000);
-  
-    
-   
-
-
-
-
-
+      setTimeout(() => {
+        handleClose();
+      }, 1000);
     } catch (error) {
       console.error('There was an error adding the blog!', error);
       setMessage('Failed to add blog post');
     }
   };
-
-
-
-
-
-
 
   const handleImageChange = (e) => {
     const reader = new FileReader();
@@ -62,24 +49,22 @@ const AddBlog = ({ handleClose }) => {
   };
 
   return (
-    <div className='fixed inset-0 z-10 bg-black/60 backdrop-blur-sm flex justify-center items-center'>
-
-      <div className='relative w-full max-w-lg bg-white/90 backdrop-blur-sm shadow-lg p-10 rounded-lg'>
- 
+    <div className='fixed inset-2 z-10 flex justify-center items-center'>
+      <div className='relative w-5/12 max-w-lg bg-gradient-to-r from-gray-800 to-blue-950 opacity-98 shadow-lg p-8 rounded-2xl'>
         <button
           onClick={handleClose}
-          className='absolute top-4 right-4 text-red-500 text-xl hover:text-red-700'
+          className='absolute top-5 right-7 text-white text-xl hover:text-red-400'
         >
-          &#10005;
+          <MdClose />
         </button>
 
-        <h1 className='primary_text text-[36px] max-sm:text-[22px] text-center'>
+        <h1 className='text-2xl text-white font-bold text-center'>
           Add a New Blog Post
         </h1>
 
         <form onSubmit={handleSubmit} className='mt-6'>
           <div className='mb-4'>
-            <label className='block mb-2 text-sm font-medium text-gray-900'>
+            <label className='block mb-2 text-sm text-white'>
               Blog Title
             </label>
             <input
@@ -93,7 +78,7 @@ const AddBlog = ({ handleClose }) => {
           </div>
 
           <div className='mb-4'>
-            <label className='block mb-2 text-sm font-medium text-gray-900'>
+            <label className='block mb-2 text-sm text-white'>
               Blog Description
             </label>
             <textarea
@@ -107,26 +92,30 @@ const AddBlog = ({ handleClose }) => {
           </div>
 
           <div className='mb-4'>
-            <label className='block mb-2 text-sm font-medium text-gray-900'>
+            <label className='block mb-2 text-sm text-white'>
               Upload Blog Image
             </label>
-            <input
-              type='file'
-              accept='image/*'
-              onChange={handleImageChange}
-              className='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500'
-            />
+            <div className='flex items-center pt-2'>
+              <input
+                type='file'
+                accept='image/*'
+                onChange={handleImageChange}
+                className='block w-full text-sm text-gray-400 border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-3 focus:ring-blue-500'
+              />
+              <FaUpload className='ml-3 text-white text-lg cursor-pointer' />
+            </div>
           </div>
 
           <button
             type='submit'
-            className='px-6 py-2 bg-[#d59900] text-white rounded-lg hover:bg-[#b88b00] transition duration-300'>
+            className='w-full px-6 py-2 mt-2 bg-[#9b8e20] text-white rounded-lg hover:bg-[#4b882a] transition duration-300'
+          >
             Submit Blog Post
           </button>
         </form>
 
         {message && (
-          <p className='mt-5 text-[16px] text-center text-[#d59900]'>{message}</p>
+          <p className='mt-4 text-[16px] text-center text-[#1b4b6e]'>{message}</p>
         )}
       </div>
     </div>
