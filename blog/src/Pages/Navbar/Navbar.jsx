@@ -8,6 +8,14 @@ const Navbar = () => {
     setVisible(!visible);
   };
 
+  // Function to scroll to a specific section based on the id
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       {/* Display AddBlog Component if visible */}
@@ -38,28 +46,34 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* SearchBar Part */}
-        {/* <div className='w-80 bg-slate-100 flex items-center px-4 bg-transparent border-2 border-white'>
-          <input
-            type='text'
-            placeholder='Search...'
-            className='w-full text-xs text-white bg-transparent py-[11px] outline-none font-serif'
-          />
-          <FaMagnifyingGlass className='text-slate-400 cursor-pointer hover:text-white' />
-        </div> */}
-
         {/* List Part */}
         <div className='px-6 max-sm:hidden'>
           <ul className='flex items-center gap-10 font-serif text-[20px]'>
-            <li className='hover:text-slate-400 hover:underline cursor-pointer'>Home</li>
-            <li className='hover:text-slate-400 hover:underline cursor-pointer'>Blog</li>
+            {/* Each item triggers a scroll to its corresponding section */}
+            <li
+              className='hover:text-slate-400 hover:underline cursor-pointer'
+              onClick={() => handleScroll('home')}
+            >
+              Home
+            </li>
+            <li
+              className='hover:text-slate-400 hover:underline cursor-pointer'
+              onClick={() => handleScroll('blog')}
+            >
+              Blog
+            </li>
             <li
               className='hover:text-slate-400 hover:underline cursor-pointer'
               onClick={handleVisible}
             >
               Add Blogs
             </li>
-            <li className='hover:text-slate-400 hover:underline cursor-pointer'>Contact</li>
+            <li
+              className='hover:text-slate-400 hover:underline cursor-pointer'
+              onClick={() => handleScroll('contact')}
+            >
+              Contact
+            </li>
           </ul>
         </div>
       </div>

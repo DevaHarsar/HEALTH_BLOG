@@ -1,45 +1,25 @@
-
-import Footer from '../../blog/src/Pages/Footer/Footer'
-import HomePage from '../src/Pages/LandPage/Homepage'
-import Blog from './Pages/BlogCard/Blog'
-import Navbar from './Pages/Navbar/Navbar'
-
-
-
-// router vendaaaaaam
-// const routes = (
-//   <Router>
-//     <Routes>
-      
-//       <Route path='/navbar' element = {<Navbar/>} />
-//       <Route path='/' element={<HomePage/>} />
-//       <Route path='/Blog' element = {<Layout/>} />
-//       <Route path='/Footer' elemenjt = {<Footer/>} />
-//     </Routes>
-   
-   
-//   </Router>
-// )
-
+import React from 'react';
+import Footer from '../src/Pages/Footer/Footer';
+import HomePage from '../src/Pages/LandPage/Homepage';
+import Blog from './Pages/BlogCard/Blog';
+import Navbar from './Pages/Navbar/Navbar';
 
 const App = () => {
   return (
-    // <div>
-    //   {routes}
-    // </div> 
-<>
-    <Navbar/>
-    <HomePage/>
-    <Blog/>
-    {/* <BlogPost/> */}
-    {/* <AddBlog/> */}
-    <Footer/>
-   
-   
+    <>
+      <Navbar />
+      {/* Each component should have a unique ID for scrolling */}
+      <div id='home'>
+        <HomePage />
+      </div>
+      <div id='blog'>
+        <Blog />
+      </div>
+      <div id='contact'>
+        <Footer />
+      </div>
     </>
+  );
+};
 
- 
-  )
-}
-
-export default App
+export default App;
