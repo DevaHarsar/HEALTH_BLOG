@@ -12,7 +12,9 @@ app.use(bodyParser.json({ limit: '50mb' }));  // Increase the limit as per your 
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Enable CORS (configure origin if needed)
-app.use(cors({ origin: 'http://localhost:5173' })); // Adjust the origin if required
+app.use(cors({ origin: 'http://localhost:5173',
+    
+ })); // Adjust the origin if required
 
 // Connect to the database
 connectDb();
@@ -53,6 +55,19 @@ app.get('/:id', async (req, res) => {
         return res.json(blog);
     } catch (error) {
         return res.status(500).json({ error: 'Error fetching blog post' });
+    }
+});
+
+
+app.delete('/:id', async (req, res) => {
+    try {
+        const deleteItem = await itemModel.findByIdAndDelete(req.params.id);
+        if (!deleteItem) {
+            return res.status(404).json({ error: 'Blog post deleted' });
+        }
+        return res.json(deleteItem);
+    } catch (error) {
+        return res.status(500).json({ error: 'Error deleting' });
     }
 });
 
