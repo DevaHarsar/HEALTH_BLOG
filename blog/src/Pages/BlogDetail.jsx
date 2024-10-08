@@ -46,7 +46,11 @@ const BlogDetail = () => {
     }
   };
 
-  if (!blog) return <div>Loading...</div>;
+  if (!blog) return <div className="flex-col gap-4 w-full h-svh flex items-center justify-center">
+  <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+    <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full" />
+  </div>
+</div>
 
   return (
     <>
@@ -58,7 +62,7 @@ const BlogDetail = () => {
             <img 
               src={blog.imageURL}  
               alt={blog.title} 
-              className="rounded-lg w-full h-[60%] mt-3 transform transition-transform hover:scale-105 duration-500 border-2" 
+              className="rounded-lg w-full h-[60%] mt-3 transform transition-transform hover:scale-95 duration-500 border-2" 
             />
             <p className="text-gray-700 mb-4 mt-2">{blog.description}</p>
             <p className="text-gray-700 mb-4">
