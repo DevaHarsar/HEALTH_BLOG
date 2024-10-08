@@ -25,7 +25,7 @@ const Navbar = () => {
       {visible && <AddBlog handleClose={handleVisible} />}
 
       {/* Navbar Section */}
-      <div className='w-screen py-2.5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
+      <div className='w-full py-2.5 bg-black text-white flex justify-between items-center px-6 drop-shadow max-sm:py-3'>
         {/* Logo Part */}
         <div className='flex items-center gap-3 px-16 max-sm:px-8'>
           <div className='w-16 h-16 flex items-center justify-center rounded-full bg-slate-100 font-medium text-slate-950 max-sm:h-12 max-sm:w-16'>
