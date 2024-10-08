@@ -53,20 +53,20 @@ const Navbar = () => {
         <div className='px-8 max-sm:hidden'>
           <ul className='flex items-center gap-10 font-serif text-[20px]'>
             
+            <Link to={'/'}>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('home')}
             >
               HOME
             </li>
-            <Link to={'/blog'}>
+            </Link>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('blog')}
             >
               BLOG
             </li>
-            </Link>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={handleVisible}
