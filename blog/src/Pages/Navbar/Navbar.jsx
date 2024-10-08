@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AddBlog from '../../Components/AddBlog';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
@@ -51,18 +52,21 @@ const Navbar = () => {
         {/* List Part for Desktop */}
         <div className='px-8 max-sm:hidden'>
           <ul className='flex items-center gap-10 font-serif text-[20px]'>
+            
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('home')}
             >
               HOME
             </li>
+            <Link to={'/blog'}>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={() => handleScroll('blog')}
             >
               BLOG
             </li>
+            </Link>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
               onClick={handleVisible}

@@ -43,6 +43,19 @@ app.post('/add', async (req, res) => {
     }
 });
 
+
+app.get('/:id', async (req, res) => {
+    try {
+        const blog = await itemModel.findById(req.params.id);
+        if (!blog) {
+            return res.status(404).json({ error: 'Blog post not found' });
+        }
+        return res.json(blog);
+    } catch (error) {
+        return res.status(500).json({ error: 'Error fetching blog post' });
+    }
+});
+
 // Start the server
 app.listen(3333, () => {
     console.log("App is running on port 3333");
