@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
 
-    <div className='w-screen flex flex-col  bg-black text-white py-5'>
+    <div className='w-full flex flex-col  bg-black text-white py-5'>
     <div className='w-full flex flex-col  bg-black text-white py-5'>
 
       <div className='bg-black flex flex-row  justify-evenly font-playfair text-lg max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:text-sm'>
@@ -59,6 +59,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
   )
