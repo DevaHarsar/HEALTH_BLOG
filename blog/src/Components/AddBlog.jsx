@@ -16,7 +16,7 @@ const AddBlog = ({ handleClose }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3333/add' || 'https://health-blog-fswc.onrender.com', {
+      const response = await axios.post('https://health-blog-fswc.onrender.com', {
         title,
         description,
         imageURL: imageurl,

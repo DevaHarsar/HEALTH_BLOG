@@ -8,7 +8,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:3333' || 'https://health-blog-fswc.onrender.com');
+        const res = await fetch('https://health-blog-fswc.onrender.com');
         const data = await res.json();
         setItems(data.items);
       } catch (error) {
