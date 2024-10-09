@@ -7,19 +7,24 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// Use body-parser to handle large payloads
-app.use(bodyParser.json({ limit: '50mb' }));  // Increase the limit as per your requirements
+
+app.use(bodyParser.json({ limit: '50mb' }));  
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
-// Enable CORS (configure origin if needed)
-app.use(cors({ origin: 'http://localhost:5173',
-    
- })); // Adjust the origin if required
 
-// Connect to the database
+app.use(cors({ 
+    origin: 'http://localhost:5173',
+    origin:'https://health-blog-beta.vercel.app/',
+    methods: ['GET', 'POST'],
+    credentials: true,
+
+    
+ })); 
+
+
 connectDb();
 
-// Route to fetch all items
+
 app.get('/', async (req, res) => {
     try {
         const response = await itemModel.find();
@@ -29,7 +34,7 @@ app.get('/', async (req, res) => {
     }
 });
 
-// Route to add a new item
+
 app.post('/add', async (req, res) => {
     try {
         const newItem = new itemModel({
@@ -71,7 +76,7 @@ app.delete('/:id', async (req, res) => {
     }
 });
 
-// Start the server
+
 app.listen(3333, () => {
     console.log("App is running on port 3333");
 });
