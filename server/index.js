@@ -78,7 +78,10 @@ app.delete('/:id', async (req, res) => {
     }
 });
 
-
-app.listen(3333, () => {
-    console.log("App is running on port 3333");
+const port = process.env.PORT || 3333;
+// app.listen(3333, () => {
+//     console.log("App is running on port 3333");
+// });
+app.listen(port, '0.0.0.0', () => {
+    console.log(`App is running on port ${port}`);
 });
