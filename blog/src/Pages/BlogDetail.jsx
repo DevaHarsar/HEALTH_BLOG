@@ -13,7 +13,7 @@ const BlogDetail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await fetch(`http://localhost:3333/${id}`);
+        const res = await fetch(`http://localhost:3333/${id}` || `https://health-blog-fswc.onrender.com/${id}`);
            const data = await res.json();
         setBlog(data);
         console.log("done");
@@ -30,7 +30,7 @@ const BlogDetail = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:3333/${id}`, {
+      const response = await fetch(`http://localhost:3333/${id}` || `https://health-blog-fswc.onrender.com/${id}`, {
         method: 'DELETE',
       });
 
