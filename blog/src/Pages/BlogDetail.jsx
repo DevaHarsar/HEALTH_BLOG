@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillFacebook, AiFillHeart, AiFillLinkedin, AiOutlineLink, AiOutlineTwitter } from 'react-icons/ai';
 import { useNavigate, useParams } from 'react-router-dom';
-
+import Navbar from './Navbar/\/Navbar'
 import { de, heart, likedHeart } from '../../src/assets/index';
 
 const BlogDetail = () => {
@@ -54,9 +54,10 @@ const BlogDetail = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="h-full m-2">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 h-full">
-          <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-lg h-full">
+          <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-xl h-full">
             <h1 className="text-4xl font-bold text-gray-800 mb-2">{blog.title}</h1>
             <p className="text-sm text-gray-500">By Admin · Oct 6, 2024 · 5 min read</p>
             <img 
@@ -89,7 +90,7 @@ const BlogDetail = () => {
             </div>
           </div>
 
-          <div className="bg-slate-400 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+          <div className="bg-slate-400 p-10 rounded-lg shadow-lg flex flex-col justify-between h-3/5 mt-32">
             <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" 
