@@ -27,7 +27,7 @@ const Blog = () => {
   return (
     <div className='mt-72'>
       {/* Page Title */}
-      <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9'>
+      <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9 mb-4'>
         Recent Blogs
       </h1>
 
@@ -41,11 +41,11 @@ const Blog = () => {
         //   />
         // </div>
 
-        <div className="flex-col gap-4 w-full h-svh flex items-center justify-center">
-  <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
-    <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full" />
-  </div>
-</div>
+        <div className="gap-x-3 flex h-full w-full justify-center items-center pb-20">
+      <div className="w-5 bg-[#d991c2] h-5 rounded-full animate-bounce [animation-delay:-.2s]" />
+      <div className="w-5 h-5 bg-[#9869b8] rounded-full a animate-bounce [animation-delay:-.4s]" />
+      <div className="w-5 h-5 bg-[#6756cc] rounded-full animate-bounce [animation-delay:-.6s]" />
+    </div>
       ) : (
         <>
           {/* Cards Section */}
