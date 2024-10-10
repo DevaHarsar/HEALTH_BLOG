@@ -22,7 +22,7 @@ const Athu = ({ image, title, id }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      {/* Image Section */}
+      {/* image section */}
       <Link to={`/blog/${id}`}> 
         <div className='w-full h-[200px]'>
           <img
@@ -33,7 +33,7 @@ const Athu = ({ image, title, id }) => {
         </div>
       </Link>
 
-      {/* Content Section */}
+      {/* content section */}
       <div className='p-7 pt-4 flex flex-col h-20 mt-5'>
         <Link to={`/blog/${id}`} className='cursor-pointer'>
           <h1 className='primary_text text-black text-[20px] font-semibold opacity-80 hover:text-[#d59900] overflow-hidden whitespace-nowrap text-ellipsis'>
@@ -44,7 +44,7 @@ const Athu = ({ image, title, id }) => {
         <div className='mt-auto'>
           <p className='opacity-10 p-0 m-0'>_</p>
 
-          {/* Heart Icon */}
+          {/* heart icon */}
           <img
             src={liked ? likedHeart : heart}
             alt="Like"
