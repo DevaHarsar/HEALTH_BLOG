@@ -77,12 +77,12 @@ app.delete('/:id', async (req, res) => {
         return res.status(500).json({ error: 'Error deleting' });
     }
 });
-const port = process.env.PORT || 3333;
-app.listen(port, '0.0.0.0', () => {
-    console.log(`App is running on port ${port}`);
-});
-    
-// app.listen(3333, () => {
-//     console.log("App is running on port 3333");
-    
+// const port = process.env.PORT || 3333;
+// app.listen(port, '0.0.0.0', () => {
+//     console.log(`App is running on port ${port}`);
 // });
+    
+app.listen(3333, () => {
+    console.log("App is running on port 3333");
+    
+});
