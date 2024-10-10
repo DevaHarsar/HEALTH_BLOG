@@ -17,7 +17,7 @@ app.use(cors({
     // origin: 'http://localhost:5173',
     origin:'https://health-blog-beta.vercel.app',
 
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST' ,'DELETE'],
      credentials: true,
 
     
