@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillFacebook, AiFillHeart, AiFillLinkedin, AiOutlineLink, AiOutlineTwitter } from 'react-icons/ai';
 import { useNavigate, useParams } from 'react-router-dom';
-import Navbar from './Navbar/\/Navbar'
+import Navbar from './Navbar/Navbar';
 import { de, heart, likedHeart } from '../../src/assets/index';
 
 const BlogDetail = () => {
   const [liked, setLiked] = useState(false);
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [blog, setBlog] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
+<<<<<<< Updated upstream
         const res = await fetch(`https://health-blog-fswc.onrender.com/${id}`);
            const data = await res.json();
+=======
+        const res = await fetch(http://localhost:3333/${id});
+        const data = await res.json();
+>>>>>>> Stashed changes
         setBlog(data);
-        console.log("done");
       } catch (error) {
         console.error('Failed to fetch the blog post:', error);
       }
@@ -30,14 +34,16 @@ const BlogDetail = () => {
 
   const handleDelete = async () => {
     try {
+<<<<<<< Updated upstream
       const response = await fetch(`https://health-blog-fswc.onrender.com/${id}`, {
+=======
+      const response = await fetch(http://localhost:3333/${id}, {
+>>>>>>> Stashed changes
         method: 'DELETE',
       });
 
       if (response.ok) {
-        console.log('Blog deleted successfully');
-   
-        navigate('/'); 
+        navigate('/');
       } else {
         console.error('Failed to delete the blog post');
       }
@@ -46,51 +52,52 @@ const BlogDetail = () => {
     }
   };
 
-  if (!blog) return <div className="flex-col gap-4 w-full h-svh flex items-center justify-center">
-  <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
-    <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full" />
-  </div>
-</div>
+  if (!blog) return (
+    <div className="flex-col gap-4 w-full h-screen flex items-center justify-center">
+      <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+        <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full" />
+      </div>
+    </div>
+  );
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="h-full m-2">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 h-full">
-          <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-xl h-full">
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">{blog.title}</h1>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 h-full">
+          <div className="lg:w-2/3 bg-white p-6 rounded-lg shadow-xl h-full">
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-2">{blog.title}</h1>
             <p className="text-sm text-gray-500">By Admin · Oct 6, 2024 · 5 min read</p>
             <img 
               src={blog.imageURL}  
               alt={blog.title} 
-              className="rounded-lg w-full h-[60%] mt-3 transform transition-transform hover:scale-95 duration-500 border-2" 
+              className="rounded-lg w-full h-auto mt-3 transform transition-transform hover:scale-95 duration-500 border-2" 
             />
             <p className="text-gray-700 mb-4 mt-2">{blog.description}</p>
             <p className="text-gray-700 mb-4">
               In this blog, we’ll explore various workout regimes, the importance of nutrition, and how mental health plays a vital role in achieving your fitness goals.
             </p>
 
-            <div className='w-full h-[120px]'>
-              <div className='flex'>
-                <img
-                  src={liked ? likedHeart : heart}
-                  alt="Like"
-                  width={20}
-                  height={15}
-                  className='ml-2 object-contain cursor-pointer pt-1 hover:brightness-150 transition duration-200'
-                  onClick={handleLikeClick}
-                />
-                <img 
-                  src={de} 
-                  alt="Delete" 
-                  className='w-8 h-8 cursor-pointer ml-2'
-                  onClick={handleDelete} 
-                />
-              </div>
+            <div className='w-full h-[120px] flex justify-between items-center'>
+              <img
+                src={liked ? likedHeart : heart}
+                alt="Like"
+                width={20}
+                height={15}
+                className='ml-2 object-contain cursor-pointer pt-1 hover:brightness-150 transition duration-200'
+                onClick={handleLikeClick}
+              />
+              <img 
+                src={de} 
+                alt="Delete" 
+                className='w-8 h-8 cursor-pointer ml-2'
+                onClick={handleDelete} 
+              />
             </div>
           </div>
 
-          <div className="bg-slate-400 p-10 rounded-lg shadow-lg flex flex-col justify-between h-3/5 mt-32">
+          {/* Author Info */}
+          <div className="lg:w-1/3 bg-slate-400 p-6 rounded-lg shadow-lg flex flex-col justify-between h-auto mt-4 lg:mt-0">
             <div className="flex flex-col items-center">
               <img 
                 src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" 
@@ -108,13 +115,13 @@ const BlogDetail = () => {
 
             <div className="mt-6 border-t pt-4">
               <div className="flex justify-center space-x-4 mb-4">
-                <a href="#" className="text-gray-500 hover:text-blue-600">
+                <a href="https://github.com/MaX-NeO" className="text-gray-500 hover:text-blue-600">
                   <AiFillFacebook size={24} />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-blue-500">
+                <a href="https://github.com/MaX-NeO" className="text-gray-500 hover:text-blue-500">
                   <AiOutlineTwitter size={24} />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-blue-700">
+                <a href="https://github.com/MaX-NeO" className="text-gray-500 hover:text-blue-700">
                   <AiFillLinkedin size={24} />
                 </a>
                 <a href="#" className="text-gray-500 hover:text-gray-700">

@@ -63,7 +63,13 @@ const Navbar = () => {
             </Link>
             <li
               className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
-              onClick={() => handleScroll('blog')}
+              onClick={() => handleScroll('about')}
+            >
+              ABOUT
+            </li>
+            <li
+              className='hover:text-slate-400 font-sans hover:underline cursor-pointer'
+              onClick={() => handleScroll('popular')}
             >
               BLOG
             </li>
@@ -90,14 +96,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+    
       {isMenuOpen && (
         <div className='sm:hidden bg-black text-white py-4'>
           <ul className='flex flex-col items-center gap-4 font-serif text-[18px]'>
             <li onClick={() => handleScroll('home')} className='hover:text-slate-400 font-sans cursor-pointer'>
               HOME
             </li>
-            <li onClick={() => handleScroll('blog')} className='hover:text-slate-400 font-sans cursor-pointer'>
+            <li onClick={() => handleScroll('about')} className='hover:text-slate-400 font-sans cursor-pointer'>
+              ABOUT
+            </li>
+            <li onClick={() => handleScroll('popular')} className='hover:text-slate-400 font-sans cursor-pointer'>
               BLOG
             </li>
             <li onClick={handleVisible} className='hover:text-slate-400 font-sans cursor-pointer'>

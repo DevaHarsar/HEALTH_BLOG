@@ -4,6 +4,8 @@ import HomePage from '../Pages/LandPage/Homepage'
 import Blog from '../Pages/BlogCard/Blog'
 import Footer from '../Pages/Footer/Footer'
 import { Outlet } from 'react-router-dom'
+import About from '../Pages/About/About'
+import PopularBlogs from '../Pages/BlogCard/PopularBlog'
 
 const Layout = () => {
   return (
@@ -13,6 +15,12 @@ const Layout = () => {
 
     <div id='home'>
         <HomePage/>
+    </div>
+    <div id='about'>
+        <About/>
+    </div>
+    <div id='popular'>
+        <PopularBlogs/>
     </div>
 
     <div id='blog'>

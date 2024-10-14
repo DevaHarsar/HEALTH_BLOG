@@ -25,7 +25,7 @@ const Blog = () => {
   };
 
   return (
-    <div className='mt-72'>
+    <div className='mt-4'>
       {/* Page Title */}
       <h1 className='primary_text text-[36px] px-14 max-sm:p-0 max-sm:text-[22px] max-sm:pl-9 mb-4'>
         Recent Blogs
