@@ -13,13 +13,8 @@ const BlogDetail = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-<<<<<<< Updated upstream
         const res = await fetch(`https://health-blog-fswc.onrender.com/${id}`);
            const data = await res.json();
-=======
-        const res = await fetch(http://localhost:3333/${id});
-        const data = await res.json();
->>>>>>> Stashed changes
         setBlog(data);
       } catch (error) {
         console.error('Failed to fetch the blog post:', error);
@@ -34,11 +29,7 @@ const BlogDetail = () => {
 
   const handleDelete = async () => {
     try {
-<<<<<<< Updated upstream
       const response = await fetch(`https://health-blog-fswc.onrender.com/${id}`, {
-=======
-      const response = await fetch(http://localhost:3333/${id}, {
->>>>>>> Stashed changes
         method: 'DELETE',
       });
 
