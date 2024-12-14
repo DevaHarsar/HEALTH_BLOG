@@ -6,6 +6,7 @@ const Blog = () => {
   const [items, setItems] = useState([]);
   const [visibleItems, setVisibleItems] = useState(8);
 
+  
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch('http://localhost:3333');
@@ -30,7 +31,7 @@ const Blog = () => {
       <div className='w-full flex justify-center items-start px-14 max-sm:w-full max-sm:p-4 '>
         <div className='mt-10 grid gap-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-2 lg:grid-rows-2'>
           {items.slice(0, visibleItems).map((post, index) => (
-            <Card key={index} id={post._id} image={post.imageURL} title={post.description} />
+            <Card key={index} id={post._id} image={post.imageURL} title={post.description}/>
           ))}
         </div>
       </div>

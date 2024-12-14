@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { heart, likedHeart } from '../../assets';
 
 
-const Athu = ({ image, title, id }) => {
+const Athu = ({ image, title, id}) => {
   const [liked, setLiked] = useState(false);
 
 

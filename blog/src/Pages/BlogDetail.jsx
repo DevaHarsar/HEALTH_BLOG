@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillFacebook, AiFillHeart, AiFillLinkedin, AiOutlineLink, AiOutlineTwitter } from 'react-icons/ai';
 import { useNavigate, useParams } from 'react-router-dom';
-
 import { de, heart, likedHeart } from '../../src/assets/index';
 
 const BlogDetail = () => {
@@ -10,17 +9,18 @@ const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const navigate = useNavigate();
 
+  const fetchBlog = async () => {
+    try {
+      const res = await fetch(`http://localhost:3333/${id}`);
+         const data = await res.json();
+      setBlog(data);
+      console.log("done");
+    } catch (error) {
+      console.error('Failed to fetch the blog post:', error);
+    }
+  };
+  
   useEffect(() => {
-    const fetchBlog = async () => {
-      try {
-        const res = await fetch(`http://localhost:3333/${id}`);
-           const data = await res.json();
-        setBlog(data);
-        console.log("done");
-      } catch (error) {
-        console.error('Failed to fetch the blog post:', error);
-      }
-    };
     fetchBlog();
   }, [id]);
 
@@ -36,8 +36,9 @@ const BlogDetail = () => {
 
       if (response.ok) {
         console.log('Blog deleted successfully');
-   
+
         navigate('/'); 
+
       } else {
         console.error('Failed to delete the blog post');
       }

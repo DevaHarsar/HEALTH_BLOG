@@ -1,14 +1,16 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const AddBlog = ({ handleClose }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imageurl, setImage] = useState('');
   const [message, setMessage] = useState('');
-
+  const navigate = useNavigate();
+  
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     if (!title || !description) {
       setMessage('Title and description are required');
@@ -28,14 +30,13 @@ const AddBlog = ({ handleClose }) => {
       setImage('');
       setMessage('Blog post added successfully!');
 
-
-        setTimeout(() => {
-          handleClose();
+      setTimeout(() => {
+        handleClose();
         }, 1000);
-
-
-    } catch (error) {
-      console.error('There was an error adding the blog!', error);
+        
+        
+      } catch (error) {
+        console.error('There was an error adding the blog!', error);
       setMessage('Failed to add blog post');
     }
   };
